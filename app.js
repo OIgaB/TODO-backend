@@ -23,7 +23,7 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
     console.log('Ми в мідлварі 500'); 
     const {status = 500, message = "Server error"} = err;
-    // res.status(500).json({ message: err.message })   // Contact with id=qdggE76Jtbfd9eWJHrss not found 
+    // res.status(500).json({ message: err.message })    
     res.status(status).json({ message })
 })
   

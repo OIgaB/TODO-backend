@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import Joi from 'joi'; 
-import { validateAtUpdate } from '../middlewares/validateAtUpdate.js';
-import { handleMongooseError } from '../middlewares/handleMongooseError.js';
+import { validateAtUpdate } from '../middlewares/index.js';
+import { handleMongooseError } from '../middlewares/index.js';
 
 const priorities = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -25,8 +25,6 @@ const taskSchema = new Schema({
     default: false,
   },
 }, { versionKey: false, timestamps: true }); 
-
-console.log('models');
 
 taskSchema.pre('findOneAndUpdate', validateAtUpdate); 
 taskSchema.post('save', handleMongooseError); 
