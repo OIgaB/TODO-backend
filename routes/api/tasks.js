@@ -15,6 +15,8 @@ router.post('/', isEmptyBody, validateBody(schemas.addSchema), tasksCtrl.add);
 
 router.put('/:id', isValidId, isEmptyBody, validateBody(schemas.addSchema), tasksCtrl.updateById);
 
+router.patch('/:id/completed', isValidId, isEmptyBody, validateBody(schemas.updateCompletedSchema), tasksCtrl.updateStatusTask);
+
 router.delete('/:id', isValidId, tasksCtrl.deleteById);
 
 
