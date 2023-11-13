@@ -15,6 +15,17 @@ const add = async (req, res) => {
     res.status(201).json(result); 
 };
 
+const updateById = async (req, res) => { // put
+    const { id } = req.params;
+    const result = await Task.findByIdAndUpdate(id, req.body, { new: true }); 
+    console.log('in updateById:', result);
+    if(!result) {
+      throw HttpError(404, `Task with id=${id} not found`);
+    }
+    res.json(result);  
+};
+
+
 const deleteById = async (req, res) => {
     const { id } = req.params; 
     const result = await Task.findByIdAndDelete(id);  // result or null
@@ -28,5 +39,6 @@ const deleteById = async (req, res) => {
 export default { 
     getAll: ctrlWrapper(getAll),
     add: ctrlWrapper(add),
+    updateById: ctrlWrapper(updateById),
     deleteById: ctrlWrapper(deleteById),
 }
