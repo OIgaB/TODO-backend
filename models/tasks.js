@@ -31,7 +31,7 @@ taskSchema.post('save', handleMongooseError);
 taskSchema.post('findOneAndUpdate', handleMongooseError); 
 
 
-// Joi-schema for post/put-requests (requirements to every field)
+// for post-requests 
 const addSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string(),
@@ -39,14 +39,22 @@ const addSchema = Joi.object({
   completed: Joi.boolean(),
 }); 
 
-// Joi-schema for patch-requests
+// for put-requests 
+const updateSchema = Joi.object({
+  title: Joi.string(),
+  description: Joi.string(),
+  priority: Joi.string().valid(...priorities),
+  completed: Joi.boolean(),
+}); 
+
+// for patch-requests
 const updateCompletedSchema = Joi.object({
   completed: Joi.boolean().required(),
 }); 
 
-
 export const schemas = {
   addSchema,
+  updateSchema,
   updateCompletedSchema,
 }
 

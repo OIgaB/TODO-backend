@@ -13,7 +13,6 @@ mongoose.connect(DB_HOST)
     })    
   })
   .catch(error => {
-    console.log('server - Ми в catch');
     console.log(error.message);
     process.exit(1);  
   })

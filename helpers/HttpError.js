@@ -1,4 +1,4 @@
-const messageList = { // статуc 200 повертається автоматично, всі інші статуси треба явно прописувати
+const messageList = { 
     400: 'Bad Request',
     401: 'Unathorized',
     403: 'Forbidden',
@@ -6,11 +6,8 @@ const messageList = { // статуc 200 повертається автомат
     409: 'Conflict',
 }
 
-// ф-ція названа як іменник і з великої літери, бо створюється і повертається новий об'єкт 
-const HttpError = (status, message = messageList[status]) => { // якщо message не передали, то встановлюємо його значення за замовчуванням
+export const HttpError = (status, message = messageList[status]) => { 
   const error = new Error(message);
   error.status = status;
   return error;  
-} 
-
-export default HttpError;
+}; 
