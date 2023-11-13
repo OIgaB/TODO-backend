@@ -9,6 +9,8 @@ const router = express.Router();
 
 router.get('/', tasksCtrl.getAll);
 
+router.get('/:id', isValidId, tasksCtrl.getById);
+
 router.post('/', isEmptyBody, validateBody(schemas.addSchema), tasksCtrl.add);
 
 router.put('/:id', isValidId, isEmptyBody, validateBody(schemas.addSchema), tasksCtrl.updateById);
