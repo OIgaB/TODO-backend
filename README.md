@@ -8,7 +8,7 @@ The backend facilitates CRUD (Create, Read, Update, Delete) operations for tasks
 
 ## Features
 - Create: Add new task
-![Alt text](https://asset.cloudinary.com/dp9pimwin/786881cbedd0cd61d472af185d3c31e1)
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699884917/POST-request_madcgi.png)
 - Delete: Remove task by id
 ![Alt text](https://asset.cloudinary.com/dp9pimwin/1ba8af59385e5259d12d0ef31d08ba0c)
 - Update: Modify existing task by id
