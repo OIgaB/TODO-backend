@@ -8,20 +8,27 @@ The backend facilitates CRUD (Create, Read, Update, Delete) operations for tasks
 
 ## Features
 - Create: Add new task
+
 ![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699884917/POST-request_madcgi.png)
+
 - Delete: Remove task by id
-![Alt text](https://asset.cloudinary.com/dp9pimwin/1ba8af59385e5259d12d0ef31d08ba0c)
+  
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699884995/DELETE-request_c8uyof.png)
+
 - Update: Modify existing task by id
-![Alt text](https://asset.cloudinary.com/dp9pimwin/d54399e60d2989cc9a510278f7eee4b0)
-![Alt text](https://asset.cloudinary.com/dp9pimwin/961bd8bb65fa6e2115204fd5624accbe)
+  
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885038/PUT-request_j9syyg.png)
+
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885048/PATCH-request_jk3sqt.png)
+
 - Read: Retrieve all tasks or task by id
-![Alt text](https://asset.cloudinary.com/dp9pimwin/fb8201c6d85903935f8a856529935424)
-![Alt text](https://asset.cloudinary.com/dp9pimwin/4dc0cdfe97849baea56ddb5bb5a2e206)
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885074/GET-request_vbbiqw.png)
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885080/GET-request_by_id_xkwktk.png)
 
 Data in the MongoDB
-![Alt text](https://asset.cloudinary.com/dp9pimwin/e36f991343c4c71543e8ff11f857a2d6)
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885088/MongoDB_ralqxk.png)
 Data in a browser
-![Alt text](https://asset.cloudinary.com/dp9pimwin/d320515f62763e09ae8366f7d25750e3)
+![Alt text](https://res.cloudinary.com/dp9pimwin/image/upload/v1699885093/Browser_drev0h.png)
 
 ## Technologies Used
 - [Node.js] (version: 20.9.0)
